@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Design System Test</title>
+
+    <!-- Import your built library -->
+    <script type="module" src="./dist-browser/bundle.js"></script>
+
+    <style>
+      body {
+        font-family: Arial;
+        padding: 40px;
+      }
+
+      ui-button {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Primary Button Tes</h2>
+    <ui-button variant="primary" id="btn1"> Primary Button </ui-button>
+
+    <h2>Secondary Button</h2>
+    <ui-button variant="secondary" size="md"> Secondary Button Testing Here</ui-button>
+
+    <h2>Danger Button</h2>
+    <ui-button variant="danger"> Delete </ui-button>
+
+    <h2>Large Button</h2>
+    <ui-button size="lg"> Large Button </ui-button>
+
+    <h2>Custom Color</h2>
+    <ui-button color="#22c55e"> Custom Green </ui-button>
+
+    <h2>Disabled Button</h2>
+    <ui-button disabled="true"> Disabled </ui-button>
+
+    <h2>Loading Button</h2>
+    <ui-button loading="true"> Loading... </ui-button>
+  </body>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("btn1");
+
+      btn.addEventListener("ui-click", () => {
+        alert("Button clicked!");
+      });
+
+      btn.addEventListener("click", () => {
+        console.log("native click");
+      });
+    });
+  </script>
+</html>
