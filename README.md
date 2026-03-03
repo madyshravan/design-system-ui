@@ -82,6 +82,8 @@ This package provides framework-independent UI components such as:
 <ui-button></ui-button>
 ```
 
+**Component usage docs:** See [docs/README.md](docs/README.md) for a list of per-component usage documents (Button, Accordion, AccordionItem). When you change a component in `src/lib/components/`, update its doc in `docs/components/` so the docs stay in sync.
+
 ---
 
 # Architecture Overview
@@ -289,7 +291,7 @@ src/register.ts
 
 ```
 if (typeof window !== 'undefined' && 'customElements' in window) {
-  import('./lib/components/Button.svelte');
+  import('./lib/components/button/Button.svelte');
 }
 ```
 

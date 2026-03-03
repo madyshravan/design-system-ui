@@ -5,7 +5,8 @@ export default defineConfig({
   plugins: [
     svelte({
       compilerOptions: {
-        customElement: true
+        customElement: true,
+        runes: false
       }
     })
   ],

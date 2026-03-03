@@ -1,0 +1,39 @@
+---
+description: Update component usage docs when changing Svelte components
+globs: src/lib/components/**/*.svelte
+alwaysApply: false
+---
+
+# Component usage docs — keep in sync
+
+When you **add, change, or remove** anything in a component under `src/lib/components/`, update the matching usage document so the docs stay accurate.
+
+## Mapping
+
+| Component file | Usage doc |
+|----------------|-----------|
+| `button/Button.svelte` | `docs/components/Button.md` |
+| `accordion/Accordion.svelte` | `docs/components/Accordion.md` |
+| `accordion-item/AccordionItem.svelte` | `docs/components/AccordionItem.md` |
+| `input/Input.svelte` | `docs/components/Input.md` |
+| `textarea/Textarea.svelte` | `docs/components/Textarea.md` |
+| `form-select/FormSelect.svelte` | `docs/components/FormSelect.md` |
+
+**Rule:** For any `*.svelte` in `src/lib/components/`, the doc is `docs/components/<Name>.md` where `<Name>` is the PascalCase component name (e.g. `accordion-item/AccordionItem.svelte` → `AccordionItem.md`).
+
+## What to update in the doc
+
+- **Props/attributes** — Add, remove, or change type/default/description.
+- **Slots** — Add, remove, or rename slots and describe content.
+- **Events** — Document new events or change names/details.
+- **CSS variables** — List any new or removed design tokens the component uses.
+- **Examples** — Adjust or add examples so they match the current API and behavior.
+
+## New components
+
+When you add a **new** component (e.g. `src/lib/components/card/Card.svelte`):
+
+1. Create `docs/components/Card.md` with the same structure as existing docs (Overview, Custom element tag, Props, Slots, Events, CSS variables, Examples).
+2. Add an entry for it in `docs/README.md` and, if needed, in this rule’s mapping table.
+
+Each usage doc starts with a “Keep in sync” note that points to the source `.svelte` file; use that as the single source of truth when editing the doc.

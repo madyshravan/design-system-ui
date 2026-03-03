@@ -1,6 +1,6 @@
 {
-  "name": "design-system-ui",
-  "version": "0.0.1",
+  "name": "crayons-design-system-ui",
+  "version": "0.0.7",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run prepack",
@@ -27,7 +27,12 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
       "default": "./dist-browser/bundle.js"
+    },
+    "./register": {
+      "types": "./dist/register.d.ts",
+      "default": "./dist/register.js"
     }
   },
   "peerDependencies": {

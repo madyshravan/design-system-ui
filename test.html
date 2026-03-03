@@ -2,43 +2,99 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Design System Test</title>
+    <title>Crayon Design System UI</title>
 
     <!-- Import your built library -->
     <script type="module" src="./dist-browser/bundle.js"></script>
 
     <style>
       body {
-        font-family: Arial;
+        font-family: Arial, sans-serif;
         padding: 40px;
+        background: #333;
+        color: #fff;
+      }
+
+      .section {
+        margin-bottom: 32px;
+      }
+
+      .section label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
       }
 
       ui-button {
         margin-right: 10px;
       }
+
+      ui-input {
+        display: block;
+        max-width: 400px;
+        margin-bottom: 20px;
+      }
     </style>
   </head>
   <body>
-    <h2>Primary Button Tes</h2>
-    <ui-button variant="primary" id="btn1"> Primary Button </ui-button>
+    <h2>Primary Button Test</h2>
+    <ui-button variant="primary" id="btn1">
+      Primary Button
+    </ui-button>
 
-    <h2>Secondary Button</h2>
-    <ui-button variant="secondary" size="md"> Secondary Button Testing Here</ui-button>
+    <h2 style="margin-top: 40px;">Input states</h2>
 
-    <h2>Danger Button</h2>
-    <ui-button variant="danger"> Delete </ui-button>
+    <div class="section">
+      <label>Input-Type Basic/Default</label>
+      <ui-input placeholder="Placeholder"></ui-input>
+    </div>
 
-    <h2>Large Button</h2>
-    <ui-button size="lg"> Large Button </ui-button>
+    <div class="section">
+      <label>Form/Input/Basic/Active (focus to see blue border)</label>
+      <ui-input placeholder="Placeholder"></ui-input>
+    </div>
 
-    <h2>Custom Color</h2>
-    <ui-button color="#22c55e"> Custom Green </ui-button>
+    <div class="section">
+      <label>Form/Input/Basic/Data</label>
+      <ui-input value="Text" placeholder="Placeholder"></ui-input>
+    </div>
 
-    <h2>Disabled Button</h2>
-    <ui-button disabled="true"> Disabled </ui-button>
+    <div class="section">
+      <label>Form/Input/Basic/Error</label>
+      <ui-input validationstate="error" value="Text" placeholder="Placeholder"></ui-input>
+    </div>
 
-    <h2>Loading Button</h2>
-    <ui-button loading="true"> Loading... </ui-button>
+    <div class="section">
+      <label>Form/Input/Basic/Success</label>
+      <ui-input validationstate="success" value="Text" placeholder="Placeholder"></ui-input>
+    </div>
+
+    <div class="section">
+      <label>Form/Input/Basic/Disabled</label>
+      <ui-input disabled value="Disabled" placeholder="Placeholder"></ui-input>
+    </div>
+
+    <div class="section">
+      <label>Form/Search/Default</label>
+      <ui-input variant="search" placeholder="Search"></ui-input>
+    </div>
+
+    <div class="section">
+      <label>Form/Search/Active (focus to see blue border + blue icon)</label>
+      <ui-input variant="search" value="Keyword" placeholder="Search"></ui-input>
+    </div>
+
+    <div class="section">
+      <label>Email (basic)</label>
+      <ui-input id="email" type="email" placeholder="name@example.com" name="email"></ui-input>
+    </div>
+
+    <div class="section">
+      <label>Sizes</label>
+      <ui-input size="sm" placeholder="Small"></ui-input>
+      <ui-input size="md" placeholder="Default"></ui-input>
+      <ui-input size="lg" placeholder="Large"></ui-input>
+    </div>
   </body>
   <script>
     window.addEventListener("DOMContentLoaded", () => {
@@ -50,6 +106,7 @@
 
       btn.addEventListener("click", () => {
         console.log("native click");
+        alert("Button clicked!");
       });
     });
   </script>

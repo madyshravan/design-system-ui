@@ -1,0 +1,1 @@
+import{ac as t,ad as b,a6 as c,ae as d,af as h}from"./custom-element-B1AwJkrN.js";function u(a,s){return a===s||a?.[h]===s}function T(a={},s,i,k){return t(()=>{var f,r;return b(()=>{f=r,r=[],c(()=>{a!==i(...r)&&(s(a,...r),f&&u(i(...f),a)&&s(null,...f))})}),()=>{d(()=>{r&&u(i(...r),a)&&s(null,...r)})}}),a}export{T as b};
