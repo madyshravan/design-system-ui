@@ -64,17 +64,16 @@ To publish your library to [npm](https://www.npmjs.com):
 npm publish
 ```
 
-
 # Design System UI
 
 A reusable Design System built using **Svelte 5 + Web Components**, packaged for use in:
 
-* Plain HTML
-* SvelteKit
-* React
-* Angular
-* Vue
-* Any browser-based framework
+- Plain HTML
+- SvelteKit
+- React
+- Angular
+- Vue
+- Any browser-based framework
 
 This package provides framework-independent UI components such as:
 
@@ -90,10 +89,10 @@ This package provides framework-independent UI components such as:
 
 The design system is built using:
 
-* Svelte 5
-* Web Components (customElements)
-* Vite
-* SvelteKit (library mode)
+- Svelte 5
+- Web Components (customElements)
+- Vite
+- SvelteKit (library mode)
 
 Outputs:
 
@@ -143,12 +142,12 @@ Button component:
 
 Supports:
 
-* variants
-* sizes
-* disabled
-* loading
-* custom color
-* click events
+- variants
+- sizes
+- disabled
+- loading
+- custom color
+- click events
 
 ---
 
@@ -363,12 +362,12 @@ Registers the component globally.
 
 Works in:
 
-* Plain HTML
-* SvelteKit
-* React
-* Angular
-* Vue
-* Any browser-based framework
+- Plain HTML
+- SvelteKit
+- React
+- Angular
+- Vue
+- Any browser-based framework
 
 ---
 
@@ -376,16 +375,16 @@ Works in:
 
 Add more components:
 
-* Input
-* Card
-* Modal
-* Select
+- Input
+- Card
+- Modal
+- Select
 
 Optional:
 
-* Storybook
-* Private npm publish
-* Design tokens
+- Storybook
+- Private npm publish
+- Design tokens
 
 ---
 
@@ -393,11 +392,11 @@ Optional:
 
 This design system:
 
-* Uses Web Components
-* Framework independent
-* npm installable
-* SSR-safe
-* Production ready foundation
+- Uses Web Components
+- Framework independent
+- npm installable
+- SSR-safe
+- Production ready foundation
 
 ---
 
